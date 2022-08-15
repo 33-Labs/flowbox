@@ -1,0 +1,69 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+        "Domains": {
+            "source": "./contracts/0xDomains",
+            "aliases": {
+                "testnet": "0xb05b2abb42335e88",
+                "mainnet": "0x233eb012d34b0070"
+            }
+        },
+        "Flowns": {
+            "source": "./contracts/0xFlowns",
+            "aliases": {
+                "testnet": "0xb05b2abb42335e88",
+                "mainnet": "0x233eb012d34b0070"
+            }
+        },
+        "FIND": {
+            "source": "./contracts/0xFIND",
+            "aliases": {
+                "testnet": "0x35717efbbce11c74",
+                "mainnet": "0x097bafa4e0b48eef"
+            }
+        },
+        "DomainUtils": {
+            "source": "./contracts/DomainUtils.cdc",
+            "aliases": {
+                "testnet": "0xbca26f5091cd39ec",
+                "mainnet": "0x1b3930856571a52b"
+            }
+        }
+    },
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "f778c4dd208c671e82893c7af8f2c05e46ad1eff06950c0392e67dc77210c244"
+		},
+        "testnet-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "f778c4dd208c671e82893c7af8f2c05e46ad1eff06950c0392e67dc77210c244"
+        },
+        "mainnet-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "f778c4dd208c671e82893c7af8f2c05e46ad1eff06950c0392e67dc77210c244"
+        }
+	},
+	"deployments": {
+        "testnet": {
+            "testnet-account": [
+                "DomainUtils"
+            ]
+        },
+        "mainnet": {
+            "mainnet-account": [
+                "DomainUtils"
+            ]
+        }
+    }
+}
